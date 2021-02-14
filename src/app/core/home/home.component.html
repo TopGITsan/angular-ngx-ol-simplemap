@@ -10,11 +10,18 @@
     ngx dropdown <span class="caret"></span>
   </button>
   <ul *dropdownMenu class="dropdown-menu" role="menu">
-    <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+    <li role="menuitem"><a class="dropdown-item" href="#" (click)="setCenter()">Set center</a></li>
     <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
-    <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+    <li role="menuitem"><a class="dropdown-item" href="#">Mark</a></li>
     <li class="divider dropdown-divider"></li>
-    <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+    <li role="menuitem"><a class="dropdown-item" href="#">Want to go</a>
     </li>
   </ul>
 </div>
+
+
+<app-ol-map class="map"
+  [center]="center"
+  [zoom]="5"
+  (mapReady)="onMapReady($event)"
+></app-ol-map>
